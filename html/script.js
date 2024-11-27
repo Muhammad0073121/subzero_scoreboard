@@ -42,7 +42,6 @@ function Addplayers(table, identity) {
     //   table.players[i].name = ''+table.players[i].discordname+''
     // }
     ping = '<i class="fa-solid fa-wifi"></i> ' + table.players[i].ping + "";
-    console.log(`player ${i + 1}.gang: `, table.players[i].gang);
     if (table.players[i].ping > 300) {
       ping =
         '<i style="color:red;" class="fa-solid fa-wifi"></i> ' +
@@ -75,21 +74,32 @@ function Addplayers(table, identity) {
     if (!showvip) {
       vipdiv = "";
     }
-    var jobdiv = null;
+    var jobdiv = "";
 
-    if (table.players[i].gang !== "none") {
-      jobdiv =
-        `<span class="leaderboard__name job" style="float: left;position: absolute;left: 30vw;font-weight: 700;font-size: 15px;"><i class="fa-solid fa-masks-theater"></i> ` +
-        capitalizeFirstLetter(table.players[i].gang) +
-        `</span>`;
-    } else if (!showjobs && !admin) {
-      jobdiv = "";
-    } else {
-      jobdiv =
-        `<span class="leaderboard__name job" style="float: left;position: absolute;left: 30vw;font-weight: 700;font-size: 15px;"><i class="fa-solid fa-user-tie"></i> ` +
-        capitalizeFirstLetter(table.players[i].job) +
-        `</span>`;
+    if (showjobs || admin) {
+      if (table.players[i].job !== "unemployed") {
+        jobdiv =
+          `<span class="leaderboard__name job" style="float: left;position: absolute;left: 30vw;font-weight: 700;font-size: 15px;"><i class="fa-solid fa-user-tie"></i> ` +
+          capitalizeFirstLetter(table.players[i].job) +
+          `</span>`;
+      }
+      if (table.players[i].gang !== "none") {
+        if (jobdiv !== "") {
+          jobdiv = `<span class="leaderboard__name job" style="float: left;position: absolute;left: 30vw;font-weight: 700;font-size: 15px;"><i class="fa-solid fa-user-tie"></i> 
+          ${capitalizeFirstLetter(
+            table.players[i].job
+          )}<i class="fa-solid fa-masks-theater"></i> 
+            ${capitalizeFirstLetter(table.players[i].gang)}
+          </span>`;
+        } else {
+          jobdiv =
+            `<span class="leaderboard__name job" style="float: left;position: absolute;left: 30vw;font-weight: 700;font-size: 15px;"><i class="fa-solid fa-masks-theater"></i> ` +
+            capitalizeFirstLetter(table.players[i].gang) +
+            `</span>`;
+        }
+      }
     }
+
     var discdiv = "";
     if (table.usediscordname) {
       discdiv =
