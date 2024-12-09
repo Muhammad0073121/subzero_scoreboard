@@ -7,15 +7,15 @@
 }
 .leaderboard header {
   --start: 15%;
-  height: 130px;
-  /* background-image: repeating-radial-gradient(circle at var(--start), #613a3a0a 0%, #00000091 10%, rgb(0 0 0 / 53%) 10%, rgb(43 30 30 / 33%) 17%), linear-gradient(to right, #090b15b8, #1d1d1fbd); */
-  background: #050d23;
+  height: 140px;
+  background: linear-gradient(90deg, #1e40af 0%, #3b82f6 100%); /* Blue gradient */
   color: #fff;
+  border-radius: 16px 16px 0 0;
   position: relative;
-  border-radius: 12px 12px 0 0;
   overflow: hidden;
-  background: rgb(4,38,71);
-  background: linear-gradient(90deg, rgba(4,38,71,1) 0%, rgba(0,42,97,0.9164040616246498) 35%, rgba(6,109,193,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .leaderboard header .leaderboard__title {
   position: absolute;

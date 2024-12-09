@@ -158,6 +158,14 @@ window.addEventListener("message", function (table) {
       );
     }
   }
+  if (event.type == "UPDATE_ROBBERY_STATUS") {
+    const statusIndicator = document.getElementById("status-indicator");
+    if (event.state) {
+      statusIndicator.style.background = "red"; // Set to red when true
+    } else {
+      statusIndicator.style.background = "green"; // Set to green when false
+    }
+  }
   if (event.type == "show") {
     showid = event.content.showid;
     showvip = event.content.showvip;
