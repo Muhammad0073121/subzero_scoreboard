@@ -9,19 +9,21 @@
     <link rel="stylesheet" href="stylenew.css" id="css_default">
   </head>
   <body>
-    <article class="leaderboard" id="scoreboard" style="display: none;">
+    <article class="leaderboard" id="scoreboard" >
       <header>
-        <img style="enable-background:new 0 0 511.999 511.999;"  class="leaderboard__icon" id="logo" src="https://cdn.discordapp.com/attachments/1176823545188323338/1310133091456782377/myLogo.png?ex=67441c06&is=6742ca86&hm=896c5b8164ae0016c807cc6eb6456564eb12ba0d24fba1f852aeca6afa8c682e&">
-        <h1 class="leaderboard__title" style=" position: absolute; z-index: 2; top: 50%; left: calc(var(--start) * .91); transform: translateY(-50%); text-transform: uppercase; margin: 0;">
-          <span class="leaderboard__title--top" style="padding: 0 0 5px;position: absolute;top: -5px;font-size: 19px;">
-            <i class="fa-solid fa-briefcase"></i> JOBS </span>
-          <span id="jobs"></span>
-        </h1>
-        <h1 class="leaderboard__title" style=" position: absolute; z-index: 2; top: 50%; left: calc(var(--start) * 3); transform: translateY(-50%); text-transform: uppercase; margin: 0;">
-          <span class="leaderboard__title--top" style="padding: 0 0 5px;position: absolute;top: -5px;font-size: 19px;">
-            <i class="fa-solid fa-masks-theater"></i> GANGS </span>
-          <span id="gangs"></span>
-        </h1>
+        <img style="enable-background:new 0 0 511.999 511.999;"  class="leaderboard__icon" id="logo" src="https://files.fivemerr.com/images/97357eb2-130b-4c03-9f68-45d3102bbb4c.png">
+        <div>
+          <h1 class="" >
+            <span class="leaderboard__title--top" style="font-size: 19px;">
+              <i class="fa-solid fa-briefcase"></i> JOBS </span>
+            <span id="jobs"></span>
+          </h1>
+          <h1 class="" >
+            <span class="leaderboard__title--top" style="top: -5px;font-size: 19px;">
+              <i class="fa-solid fa-masks-theater"></i> GANGS </span>
+            <span id="gangs"></span>
+          </h1>
+        </div>
         <!-- <button id="myBtn" style="width: 50px; position: absolute; top: 3.4%; right: 0.4%; padding: 1px; background-color: #01588c; border: 1px solid #27272726;">
           <img id="myavatar" src="https://forum.cfx.re/uploads/default/original/4X/b/1/9/b196908c7e5dfcd60aa9dca0020119fa55e184cb.png" style=" width: 100%; ">
         </button> -->
@@ -32,9 +34,7 @@
             <i class="fas fa-male"></i>
             <content id="count">561</content>/ <content id="max">1024</content>
           </span>
-        </h1>
           <div id="robbery-status" style="
-            position: fixed; 
             bottom: 20px; 
             right: 20px; 
             background: rgba(0, 0, 0, 0.7); 
@@ -53,6 +53,7 @@
                 background: green;">
             </div>
           </div>
+        </h1>
       </header>
       <main class="leaderboard__profiles" id="main">
       </main>

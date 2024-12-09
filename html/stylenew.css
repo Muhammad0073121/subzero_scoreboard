@@ -8,7 +8,7 @@
 .leaderboard header {
   --start: 15%;
   height: 140px;
-  background: linear-gradient(90deg, #1e40af 0%, #3b82f6 100%); /* Blue gradient */
+  background: black;
   color: #fff;
   border-radius: 16px 16px 0 0;
   position: relative;
@@ -51,7 +51,7 @@
   transform: translate(-140%, -50%);
 }
 .leaderboard__profiles {
-  background-color: #21212173;
+  background-color: #131212ab;
   /* border-radius: 0 0 12px 12px; */
   padding: 15px 15px 20px;
   display: flow-root;
