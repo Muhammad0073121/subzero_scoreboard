@@ -7,13 +7,13 @@ function Addplayers(table, identity) {
   $("#gangs").empty();
   for (const i in table.whitelistedjobs) {
     $("#jobs").append(
-      `<span style="position: relative;float:left;margin-right: 20px;opacity: 1.0;margin-top: 20px;">
-              <span class="leaderboard__title--bottom" style="opacity: 1.0;">` +
+      `<span style="leaderboard__title--bottom">
+              <span class="leaderboard__title--bottom" style="opacity: 1.0; margin-left: 15px">` +
         table.whitelistedjobs[i].fa +
         ` ` +
         table.whitelistedjobs[i].label +
         `</span>
-              <span class="leaderboard__title--bottom" style="float: right;"><content id="jobcount">` +
+              <span class="leaderboard__title--bottom" style=""><content id="jobcount">` +
         table.whitelistedjobs[i].count +
         `</content></span>
               </span>`
@@ -21,13 +21,13 @@ function Addplayers(table, identity) {
   }
   for (const i in table.gangjobs) {
     $("#gangs").append(
-      `<span style="position: relative;float:left;margin-right: 20px;opacity: 1.0;margin-top: 20px;">
-              <span class="leaderboard__title--bottom" style="opacity: 1.0;">` +
+      `<span style="leaderboard__title--bottom">
+              <span class="leaderboard__title--bottom" style="opacity: 1.0; margin-left: 15px">` +
         table.gangjobs[i].fa +
         ` ` +
         table.gangjobs[i].label +
         `</span>
-              <span class="leaderboard__title--bottom" style="float: right;"><content id="jobcount">` +
+              <span class="leaderboard__title--bottom" style=""><content id="jobcount">` +
         table.gangjobs[i].count +
         `</content></span>
               </span>`
